@@ -1,0 +1,27 @@
+.button-home {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f1f9ff;
+    z-index: 2000;
+    font-size: 3rem;
+    width: 100%;
+
+    a {
+        border: 1px solid transparent;
+        display: inline-block;
+        background-color: #1A43BF;
+        color: #fff !important;
+        padding: 11px 30px;
+        font-size: 1.5rem;
+        border-radius: 0px;
+        font-weight: 400;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            border: 1.5px solid #1A43BF;
+        }
+    }
+}

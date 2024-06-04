@@ -1,0 +1,26 @@
+@mixin display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin space-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin display-grid(){
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  
+}
+@mixin title{
+    color: #1E1666;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+}

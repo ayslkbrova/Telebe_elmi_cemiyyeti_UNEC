@@ -1,0 +1,85 @@
+.header {
+    width: 100%;
+    
+    background-color: var(--background-color);
+    z-index: 1000;
+    @include space-around();
+
+    .logo {
+        @include display();
+
+        .image {
+            width: 7rem;
+            height: 7rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .logo-item {
+            font-weight: $font-weight-bold;
+            font-size: $font-size-medium;
+            color: var(--links-color);
+            width: 100%;
+        }
+    }
+
+    .nav-menu {
+        display: none;
+     }
+
+    .navbar {
+        .nav-close {
+            display: none
+        }
+
+        .links {
+            @include display();
+            gap: 16px;
+
+            .link {
+                font-weight: $font-weight-semi-bold;
+                font-size: $font-size-small;
+
+                a {
+                    color: var(--links-color);
+                    position: relative;
+                    text-decoration: none;
+
+                    &::before {
+                        background: hsl(45 100% 70%);
+                        content: "";
+                        inset: 0;
+                        position: absolute;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.5s ease-in-out;
+                        z-index: -1;
+
+                    }
+
+                    &:hover {
+                        a::before {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+    }
+
+    .light-dark-toogle {
+
+        i {
+            color: #000;
+        }
+    }
+}
+
